@@ -1,8 +1,8 @@
 import React from "react";
 
-const Task = ({ task }) => {
+const Task = ({ task, handleTaskClick }) => {
     return (
-        <div className="task">
+        <div className="task" onClick={handleTaskClick}>
            <p>{task.text}</p>
         </div>
     );

@@ -16,3 +16,7 @@
     text-align: center;
     border: 8px solid grey;
 }
+
+.completed{
+    background-color: red;
+}

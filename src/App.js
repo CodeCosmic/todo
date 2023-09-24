@@ -8,12 +8,12 @@ function App() {
 
     const handleTaskClick = (index) => {
         const updatedTasks = [...tasks];
-        updatedTasks[index].completed = !updatedTasks[index].completed;
+        updatedTasks[index].completed = true;
         setTasks(updatedTasks);
     }
 
     const addTask = (text) => {
-        setTasks([...tasks, { text }]);
+        setTasks([...tasks, { text, completed: false }]);
     }
 
     return(

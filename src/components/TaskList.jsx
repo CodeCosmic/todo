@@ -6,15 +6,15 @@ const TaskList = ({ tasks, handleTaskClick }) => {
     return (
         <div className="tasks-list">
             {tasks.map((task, index) => (
-                <Task key={index} task={task} />
+                <Task key={index} task={task} handleTaskClick={()=>handleTaskClick(index)} />
             ))}
             <h1>Completed Tasks</h1>
             <ul>
                 {tasks
                     .filter((task) => task.completed)
                     .map((task, index) => (
-                        <li key={index}
-                        onClick={()=>handleTaskClick(index)}
+                        <li
+                            key={index}
                         >
                         {task.text}
                         </li>
