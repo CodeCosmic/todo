@@ -2,24 +2,25 @@ import "../App.css"
 import React from "react"
 import Task from "./Task"
 
-const TaskList = ({ tasks, handleTaskClick }) => {
+    const TaskList = ({ tasks, handleTaskClick }) => {
+
     return (
         <div className="tasks-list">
             {tasks.map((task, index) => (
-                <Task key={index} task={task} handleTaskClick={()=>handleTaskClick(index)} />
+                !task.completed ? <Task key={index} task={task} handleTaskClick={()=>handleTaskClick(index)} /> : ''
             ))}
             <h1>Completed Tasks</h1>
-            <ul>
+            <div >
                 {tasks
                     .filter((task) => task.completed)
                     .map((task, index) => (
-                        <li
-                            key={index}
-                        >
-                        {task.text}
-                        </li>
+                        <div className="completed-tasks">
+                            <p className="completed-p" key={index}>
+                                {task.text}
+                            </p>
+                        </div>
                 ))}
-            </ul>
+            </div>
         </div>
     )
 }

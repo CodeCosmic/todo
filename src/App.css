@@ -3,20 +3,33 @@
     font-family: Arial, sans-serif;
 }
 
+body{
+    background-color: black;
+}
+
 .task {
-    background-color: #f0f0f0;
+    background-color: #242424;
     padding: 8px;
     margin: 8px;
     border: 1px solid #ccc;
 }
 
 .to-do-list{
-    max-width: 50%;
+    max-width: 30%;
     margin: 0 auto;
     text-align: center;
     border: 8px solid grey;
+    color: white;
+    background-color: black;
 }
 
-.completed{
-    background-color: red;
+.completed-tasks{
+    background-color: #242424;
+    padding: 8px;
+    margin: 8px;
+    border: 1px solid #ccc;
+}
+
+.completed-p{
+    opacity: 30%;
 }
